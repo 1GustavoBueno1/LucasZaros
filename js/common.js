@@ -12,6 +12,10 @@
     key: '<circle cx="8" cy="15" r="4"/><path d="m11 12 9-9M17 6l2.5 2.5M14.5 8.5 17 11"/>',
     home: '<path d="M4 11.5 12 5l8 6.5V20H4z"/><path d="M10 20v-5h4v5"/>',
     tag: '<path d="M3.5 12.5V4.5h8l9 9-8 8z"/><circle cx="8" cy="9" r="1.4"/>',
+    condo: '<path d="M3 20h18M5 20v-7l5-4 5 4v7M8.5 20v-3.5h3V20"/><path d="M18 20v-5M18 15a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>',
+    building: '<path d="M5 20.5V4h10v16.5M15 9h4v11.5M3 20.5h18"/><path d="M8 7.5h1M11 7.5h1M8 11h1M11 11h1M8 14.5h1M11 14.5h1M9.5 20.5v-3h1v3"/>',
+    diamond: '<path d="M6.5 4h11L21 9l-9 11L3 9z"/><path d="M3 9h18M9.5 4 8 9l4 11 4-11-1.5-5"/>',
+    factory: '<path d="M3 20.5V11l5 3V11l5 3V5h4l1 9.5v6z"/><path d="M3 20.5h18M7 17.5h2M12 17.5h2"/>',
     doc: '<path d="M6 3.5h8l4 4V20.5H6z"/><path d="M14 3.5v4h4M9 12h6M9 15.5h6"/>'
   };
 
