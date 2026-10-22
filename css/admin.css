@@ -1,0 +1,115 @@
+/* ==========================================================================
+   Painel de oportunidades — usa os tokens do landing.css
+   ========================================================================== */
+
+.adm-top { border-bottom: 1px solid var(--line-soft); }
+.adm-top__row { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 68px; }
+
+.adm { padding-top: 32px; padding-bottom: 80px; max-width: 880px; }
+.adm-title { font-size: clamp(2.4rem, 9vw, 3.6rem); }
+
+.adm-card { max-width: 520px; margin-inline: auto; }
+.adm-card .muted { margin-top: 14px; }
+.adm-card .muted b { color: var(--white); }
+
+/* ---------- Campos ---------- */
+
+.adm-form { display: grid; gap: 18px; }
+.adm-card .adm-form { margin-top: 28px; }
+.field { display: grid; gap: 6px; min-width: 0; }
+.field label, .adm-fotos legend { font-size: .86rem; font-weight: 600; color: var(--grey-1); }
+.field .muted { font-weight: 400; }
+.input {
+  width: 100%; min-height: 50px; padding: 12px 14px;
+  border: 1px solid var(--line); border-radius: var(--radius);
+  background: var(--surface); color: var(--white);
+  font: inherit; font-size: 1rem;
+}
+textarea.input { resize: vertical; min-height: 110px; line-height: 1.5; }
+select.input { appearance: none; background-image: linear-gradient(45deg, transparent 50%, var(--grey-2) 50%), linear-gradient(135deg, var(--grey-2) 50%, transparent 50%); background-position: calc(100% - 20px) 50%, calc(100% - 15px) 50%; background-size: 5px 5px; background-repeat: no-repeat; padding-right: 36px; }
+.input:focus { outline: 0; border-color: var(--orange); }
+.input::placeholder { color: var(--grey-3); }
+.field__error { display: none; font-size: .84rem; color: #FF8A5B; }
+.field.is-invalid .field__error, .field__error--live:not(:empty) { display: block; }
+.field.is-invalid .input { border-color: #FF8A5B; }
+.field__hint { font-size: .8rem; color: var(--grey-3); }
+
+.adm-grid2 { display: grid; gap: 18px; }
+.adm-grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+@media (min-width: 560px) { .adm-grid2 { grid-template-columns: 1fr 1fr; } }
+
+.adm-mais summary { cursor: pointer; font-size: .9rem; color: var(--grey-2); }
+.adm-mais[open] summary { margin-bottom: 16px; }
+.adm-check { display: flex; align-items: center; gap: 10px; font-size: .92rem; color: var(--grey-1); }
+.adm-check input { width: 18px; height: 18px; accent-color: var(--orange); }
+
+/* ---------- Lista ---------- */
+
+.adm-head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 18px; margin-bottom: 26px; }
+.adm-lista { display: grid; gap: 10px; }
+.adm-item {
+  display: grid; grid-template-columns: 72px 1fr auto; align-items: center; gap: 14px;
+  padding: 10px; border: 1px solid var(--line-soft); border-radius: 8px; background: var(--surface);
+}
+.adm-item img { width: 72px; height: 72px; object-fit: cover; border-radius: 4px; background: var(--surface-2); }
+.adm-item__body { min-width: 0; }
+.adm-item__meta { font-size: .76rem; color: var(--grey-3); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.adm-item__title { margin-top: 2px; font-weight: 600; color: var(--white); line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.adm-item__price { margin-top: 2px; font-size: .9rem; font-weight: 600; color: var(--orange); }
+.adm-item__acoes { display: flex; gap: 6px; }
+.adm-icon {
+  display: grid; place-items: center; width: 42px; height: 42px;
+  border: 1px solid var(--line); border-radius: var(--radius); background: transparent; color: var(--grey-1); cursor: pointer;
+}
+.adm-icon:hover { border-color: var(--white); color: var(--white); }
+.adm-icon--perigo:hover { border-color: #FF8A5B; color: #FF8A5B; }
+.adm-vazio { padding: 32px 20px; border: 1px dashed var(--line); border-radius: 8px; text-align: center; color: var(--grey-2); }
+
+.adm-rodape { margin-top: 28px; font-size: .86rem; color: var(--grey-3); }
+.adm-rodape b { color: var(--grey-2); font-weight: 600; }
+.adm-link { padding: 0; border: 0; background: none; color: var(--orange); font: inherit; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+
+/* ---------- Formulário (painel) ---------- */
+
+.adm-sheet__box { max-height: 94svh; }
+.adm-fotos { margin: 0; padding: 0; border: 0; display: grid; gap: 12px; }
+.adm-thumbs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+@media (min-width: 560px) { .adm-thumbs { grid-template-columns: repeat(5, 1fr); } }
+.adm-thumb { position: relative; aspect-ratio: 1; border-radius: 6px; overflow: hidden; background: var(--surface-2); border: 1px solid var(--line-soft); }
+.adm-thumb.is-capa { border-color: var(--orange); }
+.adm-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.adm-thumb__capa {
+  position: absolute; left: 6px; top: 6px; padding: 2px 8px; border-radius: 2px;
+  background: var(--orange); color: var(--bg); font-size: .68rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em;
+}
+.adm-thumb__acoes { position: absolute; right: 4px; bottom: 4px; display: flex; gap: 4px; }
+.adm-thumb__acoes button {
+  display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%;
+  border: 0; background: rgba(14,14,16,.82); color: var(--white); cursor: pointer;
+}
+.adm-thumb__acoes button:hover { background: var(--orange); color: var(--bg); }
+.adm-thumb__acoes .ico { width: 16px; height: 16px; }
+
+.adm-add {
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  min-height: 52px; border: 1px dashed var(--grey-3); border-radius: 6px;
+  color: var(--white); font-weight: 600; cursor: pointer;
+}
+.adm-add:hover, .adm-add:focus-within { border-color: var(--orange); color: var(--orange); }
+.adm-add input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+
+.adm-foot { display: grid; gap: 8px; }
+.adm-progresso { font-size: .86rem; color: var(--grey-2); min-height: 1.3em; }
+.adm-progresso:empty { display: none; }
+.btn:disabled { opacity: .6; cursor: progress; }
+
+/* ---------- Aviso ---------- */
+
+.adm-toast {
+  position: fixed; left: 50%; bottom: calc(20px + env(safe-area-inset-bottom)); transform: translateX(-50%); z-index: 100;
+  width: min(92vw, 460px); padding: 14px 18px; border-radius: 8px;
+  background: var(--white); color: var(--bg); font-weight: 600; font-size: .94rem;
+  box-shadow: 0 20px 50px -10px rgba(0,0,0,.6);
+}
+.adm-toast.is-erro { background: #FF8A5B; }
+.adm-progresso.is-erro { color: #FF8A5B; font-weight: 600; }

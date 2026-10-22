@@ -1,8 +1,13 @@
 {
+  "cleanUrls": true,
   "redirects": [
-    { "source": "/sobre.html", "destination": "/#sobre", "permanent": true },
-    { "source": "/contato.html", "destination": "/#contato", "permanent": true },
-    { "source": "/imoveis.html", "destination": "/", "permanent": true },
-    { "source": "/imovel.html", "destination": "/", "permanent": true }
+    { "source": "/sobre", "destination": "/#sobre", "permanent": true },
+    { "source": "/contato", "destination": "/#contato", "permanent": true },
+    { "source": "/imoveis", "destination": "/oportunidades", "permanent": true },
+    { "source": "/imovel", "destination": "/oportunidades", "permanent": true }
+  ],
+  "headers": [
+    { "source": "/oportunidades/oportunidades.json", "headers": [{ "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }] },
+    { "source": "/admin", "headers": [{ "key": "X-Robots-Tag", "value": "noindex" }] }
   ]
 }

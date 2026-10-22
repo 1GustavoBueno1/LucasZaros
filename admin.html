@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Painel de oportunidades | Lucas Zaros</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0E0E10">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/landing.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="page-admin">
+
+<header class="adm-top">
+  <div class="container adm-top__row">
+    <a class="brand" href="index.html">
+      <span class="brand__name">Lucas Zaros</span>
+      <span class="brand__creci">Painel de oportunidades</span>
+    </a>
+    <a class="link-line" href="oportunidades.html" target="_blank" rel="noopener">Ver página<span data-icon="arrow"></span></a>
+  </div>
+</header>
+
+<main class="container adm">
+
+  <!-- CONECTAR -->
+  <section class="adm-card" id="conectar" hidden>
+    <h1 class="display adm-title">Entrar no painel</h1>
+    <p class="muted">O painel salva as oportunidades direto no repositório do site no GitHub. Cole a chave de acesso (token) criada para o repositório <b>LucasZaros</b>.</p>
+    <form id="form-conectar" class="adm-form" novalidate>
+      <div class="field">
+        <label for="c-token">Token do GitHub</label>
+        <input class="input" id="c-token" type="password" autocomplete="off" spellcheck="false" placeholder="github_pat_…" required>
+        <p class="field__error field__error--live" id="c-erro" role="alert"></p>
+      </div>
+      <details class="adm-mais">
+        <summary>Repositório e branch</summary>
+        <div class="adm-grid2">
+          <div class="field">
+            <label for="c-repo">Repositório</label>
+            <input class="input" id="c-repo" value="1GustavoBueno1/LucasZaros" spellcheck="false">
+          </div>
+          <div class="field">
+            <label for="c-branch">Branch publicado</label>
+            <input class="input" id="c-branch" value="main" spellcheck="false">
+          </div>
+        </div>
+      </details>
+      <label class="adm-check"><input type="checkbox" id="c-lembrar" checked> Lembrar neste aparelho</label>
+      <button class="btn btn--primary btn--block" type="submit">Entrar</button>
+    </form>
+  </section>
+
+  <!-- LISTA -->
+  <section id="painel" hidden>
+    <div class="adm-head">
+      <div>
+        <p class="eyebrow">Oportunidades da semana</p>
+        <h1 class="display adm-title" id="p-total">Carregando…</h1>
+      </div>
+      <button class="btn btn--primary" type="button" id="b-nova"><span data-icon="plus"></span>Nova oportunidade</button>
+    </div>
+    <p class="adm-aviso" id="p-aviso" role="status" hidden></p>
+    <ul class="adm-lista" id="p-lista"></ul>
+    <p class="adm-rodape">
+      Conectado a <b id="p-repo"></b> ·
+      <button class="adm-link" type="button" id="b-sair">Sair</button>
+    </p>
+  </section>
+
+</main>
+
+<!-- FORMULÁRIO -->
+<dialog class="sheet adm-sheet" id="dlg" aria-labelledby="f-titulo-h">
+  <form class="sheet__box adm-sheet__box" id="form-op" novalidate>
+    <header class="sheet__head">
+      <div>
+        <p class="eyebrow" id="f-codigo">Nova</p>
+        <h2 class="display sheet__title" id="f-titulo-h">Nova oportunidade</h2>
+      </div>
+      <button class="sheet__close" type="button" data-close aria-label="Fechar"><span data-icon="close"></span></button>
+    </header>
+
+    <div class="sheet__body adm-form">
+      <fieldset class="adm-fotos">
+        <legend>Fotos <span class="muted">(a primeira é a capa)</span></legend>
+        <ul class="adm-thumbs" id="f-thumbs"></ul>
+        <label class="adm-add">
+          <input type="file" id="f-arquivos" accept="image/*" multiple>
+          <span data-icon="plus"></span>Adicionar fotos
+        </label>
+        <p class="field__error field__error--live" id="e-fotos" role="alert"></p>
+      </fieldset>
+
+      <div class="field">
+        <label for="f-titulo">Título</label>
+        <input class="input" id="f-titulo" maxlength="90" placeholder="Ex.: Casa nova com 3 quartos e área gourmet" required>
+        <p class="field__error">Escreva um título.</p>
+      </div>
+
+      <div class="adm-grid2">
+        <div class="field">
+          <label for="f-finalidade">Negócio</label>
+          <select class="input" id="f-finalidade">
+            <option value="venda">Venda</option>
+            <option value="aluguel">Aluguel</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-tipo">Tipo</label>
+          <select class="input" id="f-tipo"></select>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="f-bairro">Bairro</label>
+        <input class="input" id="f-bairro" list="l-bairros" placeholder="Ex.: Vila Aurora" required>
+        <datalist id="l-bairros"></datalist>
+        <p class="field__error">Informe o bairro.</p>
+      </div>
+
+      <div class="adm-grid2">
+        <div class="field">
+          <label for="f-preco">Preço (R$)</label>
+          <input class="input" id="f-preco" inputmode="numeric" placeholder="450.000" required>
+          <p class="field__error">Informe o preço.</p>
+        </div>
+        <div class="field">
+          <label for="f-antigo">Preço anterior <span class="muted">(opcional)</span></label>
+          <input class="input" id="f-antigo" inputmode="numeric" placeholder="480.000">
+          <p class="field__hint">Aparece riscado, com o selo "Baixou".</p>
+        </div>
+      </div>
+
+      <div class="adm-grid3">
+        <div class="field"><label for="f-quartos">Quartos</label><input class="input" id="f-quartos" inputmode="numeric"></div>
+        <div class="field"><label for="f-suites">Suítes</label><input class="input" id="f-suites" inputmode="numeric"></div>
+        <div class="field"><label for="f-banheiros">Banheiros</label><input class="input" id="f-banheiros" inputmode="numeric"></div>
+        <div class="field"><label for="f-vagas">Vagas</label><input class="input" id="f-vagas" inputmode="numeric"></div>
+        <div class="field"><label for="f-area">Área (m²)</label><input class="input" id="f-area" inputmode="decimal"></div>
+        <div class="field"><label for="f-terreno">Terreno (m²)</label><input class="input" id="f-terreno" inputmode="decimal"></div>
+      </div>
+
+      <div class="field">
+        <label for="f-descricao">Descrição</label>
+        <textarea class="input" id="f-descricao" rows="5" placeholder="Separe os parágrafos com uma linha em branco."></textarea>
+      </div>
+
+      <div class="field">
+        <label for="f-itens">Destaques <span class="muted">(um por linha)</span></label>
+        <textarea class="input" id="f-itens" rows="5" placeholder="Suíte com closet&#10;Área gourmet com churrasqueira&#10;Apta a financiar"></textarea>
+      </div>
+    </div>
+
+    <footer class="sheet__foot adm-foot">
+      <p class="adm-progresso" id="f-progresso" role="status"></p>
+      <button class="btn btn--primary btn--block" type="submit" id="f-salvar">Publicar oportunidade</button>
+    </footer>
+  </form>
+</dialog>
+
+<div class="adm-toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+<script src="js/data.js"></script>
+<script src="js/common.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>

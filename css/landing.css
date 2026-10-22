@@ -506,6 +506,14 @@ body.no-scroll { overflow: hidden; }
   .sheet__list { grid-template-columns: 1fr 1fr; column-gap: 28px; }
 }
 
+/* ---------- Faixa das oportunidades ---------- */
+
+.op-banner { padding-block: 64px; border-bottom: 1px solid var(--line-soft); background:
+  radial-gradient(70% 120% at 100% 50%, rgba(var(--warm), .4), transparent 70%), var(--bg); }
+.op-banner__inner { display: grid; gap: 28px; }
+.op-banner .muted { margin-top: 16px; max-width: 54ch; }
+@media (min-width: 900px) { .op-banner__inner { grid-template-columns: 1fr auto; align-items: end; gap: 48px; } }
+
 /* ---------- Lema ---------- */
 
 .lema { padding-block: 64px; border-bottom: 1px solid var(--line-soft); }

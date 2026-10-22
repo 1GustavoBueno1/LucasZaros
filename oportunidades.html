@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Oportunidades da semana | Lucas Zaros, corretor em Rondonópolis – MT</title>
+  <meta name="description" content="Imóveis selecionados toda semana pelo corretor Lucas Zaros em Rondonópolis – MT. Fotos, valores e atendimento pelo WhatsApp.">
+  <meta name="theme-color" content="#0E0E10">
+  <meta property="og:title" content="Oportunidades da semana | Lucas Zaros">
+  <meta property="og:description" content="Imóveis selecionados toda semana em Rondonópolis – MT.">
+  <meta property="og:image" content="assets/lucas-escritorio.jpg">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/landing.css">
+  <link rel="stylesheet" href="css/oportunidades.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body class="page-op">
+
+<header class="site-header">
+  <div class="container site-header__row">
+    <a class="brand" href="index.html" aria-label="Lucas Zaros, página inicial">
+      <span class="brand__name">Lucas Zaros</span>
+      <span class="brand__creci">CRECI/MT 17.566F</span>
+    </a>
+    <nav class="top-nav" aria-label="Principal">
+      <a href="index.html#atendimento">Atendimento</a>
+      <a href="oportunidades.html" aria-current="page">Oportunidades</a>
+      <a href="index.html#sobre">Sobre</a>
+      <a class="top-nav__whats" data-contact="whatsapp" aria-label="Chamar no WhatsApp"><span data-icon="whats"></span><span class="top-nav__label">WhatsApp</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="conteudo">
+
+  <section class="op-head tex">
+    <span class="arcs" aria-hidden="true"></span>
+    <div class="container">
+      <p class="eyebrow">Atualizada toda semana</p>
+      <h1 class="display op-head__title">Oportunidades<br>da semana</h1>
+      <p class="lead">Imóveis selecionados por mim em Rondonópolis. Gostou de algum? Toque para ver as fotos e fale com a Sônia, minha assistente.</p>
+      <div class="op-filtros" id="op-filtros" role="group" aria-label="Filtrar oportunidades" hidden></div>
+    </div>
+  </section>
+
+  <section class="section op-lista" aria-label="Lista de oportunidades">
+    <div class="container">
+      <p class="op-status" id="op-status" role="status">Carregando oportunidades…</p>
+      <ul class="op-grid" id="op-grid"></ul>
+    </div>
+  </section>
+
+  <section class="cta tex" id="contato" aria-labelledby="h-cta">
+    <span class="arcs" aria-hidden="true"></span>
+    <div class="container cta__inner">
+      <div>
+        <p class="eyebrow">Não achou?</p>
+        <h2 class="display h-xl" id="h-cta">Conte o que você procura</h2>
+        <p class="lead">Diga o bairro, o tamanho e quanto quer investir. Eu separo as opções que fazem sentido e marco as visitas com você.</p>
+      </div>
+      <div class="cta__actions">
+        <a class="btn btn--primary btn--lg" data-contact="whatsapp"><span data-icon="whats"></span>Conversar no WhatsApp</a>
+        <a class="btn btn--ghost btn--lg" data-contact="phone"><span data-icon="phone"></span><span>Ligar: <span data-text="phone">(66) 9939-3860</span></span></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer__row">
+    <div>
+      <span class="brand__name">Lucas Zaros</span>
+      <p>Corretor de imóveis · CRECI/MT 17.566F<br>Rondonópolis, Mato Grosso<br><a data-contact="email" data-text="email">lucaszaros@gmail.com</a></p>
+    </div>
+    <p class="footer__lema">Pessoas<i>·</i>Negócios<i>·</i>Conquistas<i>·</i>Sempre mais</p>
+    <p class="footer__copy">© <span id="ano">2026</span> Lucas Zaros</p>
+  </div>
+</footer>
+
+<!-- Detalhe do imóvel -->
+<dialog class="sheet op-sheet" id="op-sheet" aria-labelledby="op-title">
+  <div class="sheet__box op-sheet__box">
+    <button class="sheet__close op-sheet__close" type="button" data-close aria-label="Fechar"><span data-icon="close"></span></button>
+    <div class="op-sheet__scroll" id="op-detalhe"></div>
+    <footer class="sheet__foot">
+      <a class="btn btn--primary btn--block" id="op-whats" target="_blank" rel="noopener"><span data-icon="whats"></span>Tenho interesse, falar no WhatsApp</a>
+    </footer>
+  </div>
+</dialog>
+
+<script src="js/data.js"></script>
+<script src="js/common.js"></script>
+<script src="js/oportunidades.js"></script>
+</body>
+</html>
