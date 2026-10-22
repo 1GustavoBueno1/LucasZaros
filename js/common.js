@@ -16,6 +16,10 @@
     building: '<path d="M5 20.5V4h10v16.5M15 9h4v11.5M3 20.5h18"/><path d="M8 7.5h1M11 7.5h1M8 11h1M11 11h1M8 14.5h1M11 14.5h1M9.5 20.5v-3h1v3"/>',
     diamond: '<path d="M6.5 4h11L21 9l-9 11L3 9z"/><path d="M3 9h18M9.5 4 8 9l4 11 4-11-1.5-5"/>',
     factory: '<path d="M3 20.5V11l5 3V11l5 3V5h4l1 9.5v6z"/><path d="M3 20.5h18M7 17.5h2M12 17.5h2"/>',
+    store: '<path d="M4 9.5 5.5 4h13L20 9.5M4 9.5h16M4 9.5a2.7 2.7 0 0 0 5.3 0 2.7 2.7 0 0 0 5.4 0 2.7 2.7 0 0 0 5.3 0M5.5 12v8.5h13V12M10 20.5v-5h4v5"/>',
+    tree: '<path d="M12 21v-6M12 15c-3.6 0-6-2.2-6-5a6 6 0 0 1 12 0c0 2.8-2.4 5-6 5Z"/><path d="M9.5 21h5"/>',
+    search: '<circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/>',
+    close: '<path d="M6 6l12 12M18 6 6 18"/>',
     doc: '<path d="M6 3.5h8l4 4V20.5H6z"/><path d="M14 3.5v4h4M9 12h6M9 15.5h6"/>'
   };
 

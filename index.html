@@ -124,45 +124,9 @@
       <header class="section-head">
         <p class="eyebrow">Encontre seu imóvel</p>
         <h2 class="display h-lg" id="h-cat">Explore por categoria em Rondonópolis – MT</h2>
-        <p class="muted">Escolha uma categoria e fale com a Sônia: eu separo as opções disponíveis para você.</p>
+        <p class="muted">Toque numa categoria para ver os condomínios, edifícios e bairros que eu atendo. Escolha um e a Sônia te envia as opções disponíveis.</p>
       </header>
-      <ul class="cats">
-        <li class="cat" data-reveal>
-          <a class="cat__link" data-contact="whatsapp" data-msg="Olá, Sônia! Vim pelo site e quero ver opções de condomínios fechados.">
-            <span class="cat__ico"><span data-icon="condo"></span></span>
-            <span class="cat__body"><span class="cat__title">Condomínios fechados</span><span class="cat__text">Casas, sobrados, lotes e terrenos em condomínio.</span></span>
-            <span class="cat__go"><span data-icon="arrow"></span></span>
-          </a>
-        </li>
-        <li class="cat" data-reveal>
-          <a class="cat__link" data-contact="whatsapp" data-msg="Olá, Sônia! Vim pelo site e quero ver opções de edifícios de alto padrão.">
-            <span class="cat__ico"><span data-icon="building"></span></span>
-            <span class="cat__body"><span class="cat__title">Edifícios de alto padrão</span><span class="cat__text">Apartamentos e coberturas nos melhores prédios.</span></span>
-            <span class="cat__go"><span data-icon="arrow"></span></span>
-          </a>
-        </li>
-        <li class="cat" data-reveal>
-          <a class="cat__link" data-contact="whatsapp" data-msg="Olá, Sônia! Vim pelo site e quero ver opções de imóveis em um bairro específico.">
-            <span class="cat__ico"><span data-icon="pin"></span></span>
-            <span class="cat__body"><span class="cat__title">Imóveis por bairro</span><span class="cat__text">Casas, terrenos e apartamentos em cada região.</span></span>
-            <span class="cat__go"><span data-icon="arrow"></span></span>
-          </a>
-        </li>
-        <li class="cat cat--destaque" data-reveal>
-          <a class="cat__link" data-contact="whatsapp" data-msg="Olá, Sônia! Vim pelo site e quero ver opções de imóveis de alto padrão.">
-            <span class="cat__ico"><span data-icon="diamond"></span></span>
-            <span class="cat__body"><span class="cat__title">Alto padrão</span><span class="cat__text">O recorte premium do mercado da cidade.</span></span>
-            <span class="cat__go"><span data-icon="arrow"></span></span>
-          </a>
-        </li>
-        <li class="cat" data-reveal>
-          <a class="cat__link" data-contact="whatsapp" data-msg="Olá, Sônia! Vim pelo site e quero ver opções de barracões e galpões.">
-            <span class="cat__ico"><span data-icon="factory"></span></span>
-            <span class="cat__body"><span class="cat__title">Industrial e galpões</span><span class="cat__text">Barracões, áreas e distritos industriais.</span></span>
-            <span class="cat__go"><span data-icon="arrow"></span></span>
-          </a>
-        </li>
-      </ul>
+      <ul class="cats" id="cats"></ul>
     </div>
   </section>
 
@@ -276,6 +240,28 @@
     <p class="footer__copy">© <span id="ano">2026</span> Lucas Zaros</p>
   </div>
 </footer>
+
+<!-- Painel de cada categoria -->
+<dialog class="sheet" id="sheet" aria-labelledby="sheet-title">
+  <div class="sheet__box">
+    <header class="sheet__head">
+      <div>
+        <p class="eyebrow" id="sheet-count"></p>
+        <h2 class="display sheet__title" id="sheet-title"></h2>
+        <p class="sheet__text" id="sheet-text"></p>
+      </div>
+      <button class="sheet__close" type="button" data-close aria-label="Fechar"><span data-icon="close"></span></button>
+    </header>
+    <div class="sheet__search" id="sheet-search" hidden>
+      <span data-icon="search"></span>
+      <input type="search" id="sheet-filter" placeholder="Buscar bairro" aria-label="Buscar bairro" autocomplete="off">
+    </div>
+    <div class="sheet__body" id="sheet-body"></div>
+    <footer class="sheet__foot">
+      <a class="btn btn--primary btn--block" id="sheet-cta" data-contact="whatsapp"><span data-icon="whats"></span>Falar com a Sônia no WhatsApp</a>
+    </footer>
+  </div>
+</dialog>
 
 <!-- Barra fixa no celular -->
 <div class="dock" aria-hidden="true">
