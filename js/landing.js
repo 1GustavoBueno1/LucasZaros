@@ -106,6 +106,38 @@
     alvos.forEach(function (el) { io.observe(el); });
   }
 
+  // Prévia das oportunidades da semana (sem dados, a faixa fica só com o botão)
+  var previa = document.getElementById("op-previa");
+  if (previa && window.fetch) {
+    fetch("oportunidades/oportunidades.json", { cache: "no-cache" })
+      .then(function (r) { return r.ok ? r.json() : []; })
+      .then(function (lista) {
+        if (!lista.length) return;
+        previa.innerHTML = lista.slice(0, 6).map(function (im) {
+          var desc = im.precoAntigo && im.precoAntigo > im.preco ? im.precoAntigo - im.preco : 0;
+          var specs = [];
+          if (im.quartos) specs.push(im.quartos + (im.quartos > 1 ? " quartos" : " quarto"));
+          if (im.area) specs.push(LZ.area(im.area));
+          return (
+            '<li><a class="op-mini" href="oportunidades.html#' + encodeURIComponent(im.id) + '">' +
+              '<span class="op-mini__media">' +
+                (im.fotos && im.fotos[0] ? '<img src="' + LZ.foto(im.fotos[0], true) + '" alt="" loading="lazy" width="640" height="640">' : "") +
+                (desc ? '<span class="op-mini__tag">Baixou ' + LZ.dinheiro(desc) + "</span>" : "") +
+              "</span>" +
+              '<span class="op-mini__body">' +
+                '<span class="op-mini__place">' + LZ.icon("pin") + LZ.esc(im.bairro) + "</span>" +
+                '<span class="op-mini__title">' + LZ.esc(im.titulo) + "</span>" +
+                (specs.length ? '<span class="op-mini__specs">' + specs.join(" · ") + "</span>" : "") +
+                '<span class="op-mini__price">' + LZ.preco(im) + "</span>" +
+              "</span>" +
+            "</a></li>"
+          );
+        }).join("");
+        previa.hidden = false;
+      })
+      .catch(function () { /* a faixa continua com o botão */ });
+  }
+
   // Barra do WhatsApp no celular: aparece depois do topo, some no contato final
   var dock = document.querySelector(".dock");
   var heroAcoes = document.querySelector(".hero__actions");
