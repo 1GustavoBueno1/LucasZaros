@@ -1,6 +1,8 @@
 {
   "redirects": [
     { "source": "/sobre.html", "destination": "/#sobre", "permanent": true },
-    { "source": "/contato.html", "destination": "/#contato", "permanent": true }
+    { "source": "/contato.html", "destination": "/#contato", "permanent": true },
+    { "source": "/imoveis.html", "destination": "/", "permanent": true },
+    { "source": "/imovel.html", "destination": "/", "permanent": true }
   ]
 }

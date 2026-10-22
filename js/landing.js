@@ -1,25 +1,6 @@
-/* Página inicial: números, vitrine, empresas do grupo e animações */
+/* Página inicial: empresas do grupo, animações e barra do WhatsApp */
 (function () {
   var reduz = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-  // Números saem dos dados, para nunca ficarem desatualizados
-  var total = LZ.imoveis.length;
-  document.getElementById("f-imoveis").textContent = total;
-
-  var maiorReducao = LZ.imoveis.reduce(function (m, im) {
-    return im.precoAntigo ? Math.max(m, im.precoAntigo - im.preco) : m;
-  }, 0);
-  var fDesc = document.getElementById("f-desconto");
-  if (maiorReducao > 0) fDesc.textContent = "R$ " + Math.round(maiorReducao / 1000) + " mil";
-  else fDesc.closest(".fact").remove();
-
-  // Vitrine: destaques primeiro, depois os demais
-  var vitrine = LZ.imoveis.filter(function (i) { return i.destaque; })
-    .concat(LZ.imoveis.filter(function (i) { return !i.destaque; }));
-  document.getElementById("destaques").innerHTML = vitrine.map(function (im) {
-    return LZ.card(im);
-  }).join("") +
-    '<a class="rail__more" href="imoveis.html"><span class="display">Ver todos<br>os imóveis</span>' + LZ.icon("arrow") + "</a>";
 
   // Empresas do grupo, como as caixas iluminadas do escritório
   document.getElementById("grupo").innerHTML = LZ.empresas.map(function (e) {
