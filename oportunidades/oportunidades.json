@@ -1,5 +1,55 @@
 [
   {
+    "id": "granville-2-2-quartos",
+    "codigo": "LZ-109",
+    "titulo": "Casa nova com 2 quartos e fachada moderna, na rua principal do bairro",
+    "tipo": "casa",
+    "finalidade": "venda",
+    "preco": 280000,
+    "precoAntigo": 290000,
+    "bairro": "Granville II",
+    "quartos": 2,
+    "suites": null,
+    "banheiros": 1,
+    "vagas": null,
+    "area": 56.77,
+    "terreno": null,
+    "descricao": [
+      "Casa nova à venda no Granville II, na rua principal do bairro, com fachada moderna e 56,77 m² construídos.",
+      "Dois quartos, sala integrada com a cozinha e banheiro social. Área de serviço, garagem e espaço nos fundos."
+    ],
+    "itens": [
+      "02 quartos",
+      "Sala integrada com a cozinha",
+      "Banheiro social",
+      "Área de serviço",
+      "Garagem",
+      "Espaço nos fundos",
+      "Fachada moderna",
+      "Na rua principal do bairro"
+    ],
+    "fotos": [
+      "oportunidades/fotos/granville-2-2-quartos/01",
+      "oportunidades/fotos/granville-2-2-quartos/02",
+      "oportunidades/fotos/granville-2-2-quartos/03",
+      "oportunidades/fotos/granville-2-2-quartos/04",
+      "oportunidades/fotos/granville-2-2-quartos/05",
+      "oportunidades/fotos/granville-2-2-quartos/06",
+      "oportunidades/fotos/granville-2-2-quartos/07",
+      "oportunidades/fotos/granville-2-2-quartos/08",
+      "oportunidades/fotos/granville-2-2-quartos/09",
+      "oportunidades/fotos/granville-2-2-quartos/10",
+      "oportunidades/fotos/granville-2-2-quartos/11",
+      "oportunidades/fotos/granville-2-2-quartos/12",
+      "oportunidades/fotos/granville-2-2-quartos/13",
+      "oportunidades/fotos/granville-2-2-quartos/14",
+      "oportunidades/fotos/granville-2-2-quartos/15",
+      "oportunidades/fotos/granville-2-2-quartos/16",
+      "oportunidades/fotos/granville-2-2-quartos/17"
+    ],
+    "publicadoEm": "2026-10-22"
+  },
+  {
     "id": "sunflower-3-quartos",
     "codigo": "LZ-108",
     "titulo": "Casa com 3 quartos, fachada moderna e área gourmet com churrasqueira",
