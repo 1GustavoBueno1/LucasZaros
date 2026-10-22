@@ -1,7 +1,6 @@
 /* ==========================================================================
    Dados do site — edite aqui.
-   Contatos: os valores entre colchetes são placeholders. Troque pelos dados
-   reais do Lucas antes de publicar (um único lugar alimenta o site inteiro).
+   Um único lugar alimenta os contatos do site inteiro.
    ========================================================================== */
 
 window.LZ = window.LZ || {};
@@ -13,9 +12,8 @@ LZ.contato = {
   whatsapp: "556699393860",             // só dígitos, com 55 + DDD
   telefoneLink: "+556699393860",
   telefoneExibicao: "(66) 9939-3860",
-  email: "contato@[dominio].com.br",
-  instagram: "lucaszaros",              // sem @
-  endereco: "[Endereço do escritório], Rondonópolis – MT"
+  email: "lucaszaros@gmail.com",
+  instagram: "lucaszaros"               // sem @
 };
 
 LZ.empresas = [

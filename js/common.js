@@ -43,7 +43,7 @@
     });
     var text = {
       phone: C.telefoneExibicao, email: C.email, instagram: "@" + C.instagram,
-      creci: C.creci, endereco: C.endereco
+      creci: C.creci
     };
     document.querySelectorAll("[data-text]").forEach(function (el) {
       if (text[el.dataset.text]) el.textContent = text[el.dataset.text];
