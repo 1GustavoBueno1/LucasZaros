@@ -1,5 +1,58 @@
 [
   {
+    "id": "sunflower-3-quartos",
+    "codigo": "LZ-108",
+    "titulo": "Casa com 3 quartos, suíte e área gourmet com churrasqueira",
+    "tipo": "casa",
+    "finalidade": "venda",
+    "preco": 500000,
+    "precoAntigo": null,
+    "bairro": "Sunflower",
+    "quartos": 3,
+    "suites": 1,
+    "banheiros": 3,
+    "vagas": null,
+    "area": 114,
+    "terreno": null,
+    "descricao": [
+      "Casa à venda no Sunflower, com fachada moderna e 114 m² construídos.",
+      "São três quartos, sendo uma suíte, sala, cozinha com armários planejados, banheiro social e lavanderia.",
+      "Nos fundos, área gourmet com churrasqueira, bancada em granito e armários, quintal e banheiro de apoio."
+    ],
+    "itens": [
+      "03 quartos, sendo 01 suíte",
+      "Banheiro da suíte com gabinete",
+      "Banheiro social",
+      "Banheiro nos fundos",
+      "Cozinha com armários",
+      "Área gourmet com churrasqueira",
+      "Lavanderia com armários",
+      "Quintal",
+      "Cerca elétrica",
+      "Apta a financiar"
+    ],
+    "fotos": [
+      "oportunidades/fotos/sunflower-3-quartos/01",
+      "oportunidades/fotos/sunflower-3-quartos/02",
+      "oportunidades/fotos/sunflower-3-quartos/03",
+      "oportunidades/fotos/sunflower-3-quartos/04",
+      "oportunidades/fotos/sunflower-3-quartos/05",
+      "oportunidades/fotos/sunflower-3-quartos/06",
+      "oportunidades/fotos/sunflower-3-quartos/07",
+      "oportunidades/fotos/sunflower-3-quartos/08",
+      "oportunidades/fotos/sunflower-3-quartos/09",
+      "oportunidades/fotos/sunflower-3-quartos/10",
+      "oportunidades/fotos/sunflower-3-quartos/11",
+      "oportunidades/fotos/sunflower-3-quartos/12",
+      "oportunidades/fotos/sunflower-3-quartos/13",
+      "oportunidades/fotos/sunflower-3-quartos/14",
+      "oportunidades/fotos/sunflower-3-quartos/15",
+      "oportunidades/fotos/sunflower-3-quartos/16",
+      "oportunidades/fotos/sunflower-3-quartos/17"
+    ],
+    "publicadoEm": "2026-10-22"
+  },
+  {
     "id": "azaleia-2-quartos",
     "codigo": "LZ-107",
     "titulo": "Casa com 2 quartos em terreno inteiro, em bairro tradicional",
