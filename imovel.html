@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Imóvel | Lucas Zaros</title>
+  <meta name="description" content="Detalhes do imóvel em Rondonópolis – MT, com Lucas Zaros, CRECI/MT 17.566F.">
+  <meta name="theme-color" content="#0E0E10">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header is-scrolled">
+  <div class="container">
+    <a class="brand" href="index.html" aria-label="Lucas Zaros, página inicial">
+      <span class="brand__name">Lucas Zaros</span>
+      <span class="brand__creci">CRECI/MT 17.566F</span>
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a href="index.html">Início</a>
+      <a href="imoveis.html" aria-current="page">Imóveis</a>
+      <a href="index.html#sobre">Sobre</a>
+      <a href="index.html#contato">Contato</a>
+    </nav>
+    <a class="btn btn--ghost header-cta" data-contact="whatsapp"><span data-icon="whats"></span>WhatsApp</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Menu"><span></span></button>
+  </div>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Menu">
+    <a class="mn-link" href="index.html">Início</a>
+    <a class="mn-link" href="imoveis.html" aria-current="page">Imóveis</a>
+    <a class="mn-link" href="index.html#sobre">Sobre</a>
+    <a class="mn-link" href="index.html#contato">Contato</a>
+    <a class="btn btn--primary" data-contact="whatsapp"><span data-icon="whats"></span>Chamar no WhatsApp</a>
+    <p class="mn-foot">CRECI/MT 17.566F<br>Rondonópolis, Mato Grosso</p>
+  </nav>
+</header>
+
+<main id="conteudo">
+  <div id="imovel"></div>
+
+  <section class="section cta" id="similares-wrap" hidden>
+    <div class="container">
+      <div class="section-head">
+        <h2 class="display h-lg">Veja também</h2>
+        <a class="link-line" href="imoveis.html">Ver todos os imóveis</a>
+      </div>
+      <div class="results results--3" id="similares"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="brand__name">Lucas Zaros</span>
+        <p>Corretor de imóveis<br>CRECI/MT 17.566F<br>Rondonópolis, Mato Grosso</p>
+      </div>
+      <div>
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="imoveis.html">Imóveis</a></li>
+          <li><a href="index.html#sobre">Sobre</a></li>
+          <li><a href="index.html#contato">Contato</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul>
+          <li><a data-contact="whatsapp">WhatsApp</a></li>
+          <li><a data-contact="phone" data-text="phone"></a></li>
+          <li><a data-contact="instagram" data-text="instagram"></a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Empresas do grupo</h4>
+        <ul>
+          <li>Baruk House</li>
+          <li>Alto Padrão em Foco</li>
+          <li>Imobi Talks</li>
+          <li>A Certa (Administra Aluguel)</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-lema">Pessoas<i>·</i>Negócios<i>·</i>Conquistas<i>·</i>Sempre mais</p>
+      <p>© <span id="ano">2026</span> Lucas Zaros, CRECI/MT 17.566F</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/common.js"></script>
+<script src="js/imovel.js"></script>
+</body>
+</html>
